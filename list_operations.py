@@ -161,18 +161,27 @@ def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
     for i in range(len(input_list)/2):
         t = input_list[i]
-        input_list[i] = input_list[(len(input_list)-i)-1]
-        #input_list[0] = input_list[(12-0) -1]
-        input_list[len(input_list)] = t
+        input_list[i] = input_list[len(input_list)-i-1]
+        input_list[(len(input_list)-i)-1] = t
            
-       
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""
-    pass
+    for i in input_list:
+        if i == value:
+            return True
+    return False
+            
 
 def custom_equality(some_list, another_list):
     """custom_equality(some_list, another_list) imitates
     (some_list == another_list)
     """
-    pass
+    if len(some_list) == len(another_list):
+
+        for i in range(len(some_list)):
+            if some_list[i] != another_list[i]:
+                return False
+        return True
+    else:
+        return False
