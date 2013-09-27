@@ -66,6 +66,7 @@ def replace_head(input_list):
 def replace_third_and_last(input_list):
     """Replace the third and last elements of the input list with the value 37."""
     input_list[2] = 37
+    # input_list[2] = input_list[-1] = 37
     input_list[-1] = 37 # Is there a more efficient solution?
 
 def replace_middle(input_list):
@@ -146,7 +147,7 @@ def custom_index(input_list, value):
     for i in range(len(input_list)):
         if input_list[i] == value:
             return i
-            break
+            # break
 
 def custom_count(input_list, value):
     """custom_count(input_list, value) imitates input_list.count(value)"""
